@@ -37,10 +37,10 @@ nav ul li a {
 /* Card Container */
 .card-container {
     display: grid; /* Usar grid layout */
-    grid-template-columns: repeat(6, minmax(150px, 1fr)); /* 6 columnas flexibles */
-    gap: 20px; /* Espacio entre tarjetas */
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas flexibles */
+    gap: 10px; /* Espacio entre tarjetas */
     padding: 20px; /* Espaciado interno */
-    max-width: 1200px; /* Ancho máximo del contenedor */
+    max-width: 100%; /* Ancho máximo del contenedor */
     margin: auto; /* Centrar contenedor */
 }
 
@@ -50,13 +50,12 @@ nav ul li a {
     flex-direction: column; /* Disponer elementos en columna */
     justify-content: space-between; /* Espaciar elementos uniformemente */
     border-radius: 10px; /* Bordes redondeados */
-    flex: 6 2 calc(16.666% - 20px); /* 3 tarjetas por fila con 20px de espacio */
+    flex: 6 2 calc(16.666% - 10px); /* 6 tarjetas por fila con 20px de espacio */
     margin: 10px; /* Espaciado externo */
     padding: 15px; /* Espaciado interno */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
     text-align: center; /* Centrar texto */
     transition: transform 0.3s ease; /* Transición suave al hacer hover */
-    height: auto; /* Altura automática */
 }
 
 .card:hover {
@@ -64,8 +63,7 @@ nav ul li a {
 }
 
 .card img {
-    width: auto; /* Ancho automático */
-    height: auto; /* Altura automática */
+    width: 100%; /* Ancho automático */
     border-radius: 10px; /* Bordes redondeados */
 }
 
@@ -175,17 +173,16 @@ footer {
 @media (min-width: 1024px) {
     .card-container {
         grid-template-columns: repeat(6, 1fr); /* 6 columnas */
-        grid-template-rows: repeat(2, auto); /* 2 filas */
     }
 }
 
-@media (max-width: 1023px) and (min-width: 769px) {
+@media (max-width: 1023px) and (min-width: 768px) {
     .card-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-template-columns: repeat(6, 1fr); /* 6 columnas */
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .card-container {
         grid-template-columns: repeat(1, 1fr); /* 1 columna en móviles */
     }
