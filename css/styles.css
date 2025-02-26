@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', sans-serif; /* Fuente de la página */
+    margin: 0; /* Eliminar margen predeterminado */
+    padding: 0; /* Eliminar padding predeterminado */
+    background-color: #18e700; /* Color de fondo verde */
+    color: #333; /* Color de texto principal */
+}
+
+/* Header */
+header {
+    background-color: #fd0000; /* Color de fondo rojo */
+    color: white; /* Color de texto blanco */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none; /* Eliminar viñetas de la lista */
+    display: flex; /* Usar flexbox para la disposición */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: center; /* Centrar elementos horizontalmente */
+    gap: 15px; /* Espacio entre elementos */
+    padding-top: 10px; /* Espaciado superior */
+}
+
+nav ul li {
+    margin: 0 10px; /* Espaciado horizontal entre elementos de la lista */
+}
+
+nav ul li a {
+    color: white; /* Color de texto de los enlaces */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+}
+
+/* Card Container */
+.card-container {
+    display: grid; /* Usar grid layout */
+    grid-template-columns: repeat(6, minmax(150px, 1fr)); /* 6 columnas flexibles */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px; /* Espaciado interno */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar contenedor */
+}
+
+/* Estilo de cada tarjeta */
+.card {
+    display: flex; /* Usar flexbox para la disposición interna */
+    flex-direction: column; /* Disponer elementos en columna */
+    justify-content: space-between; /* Espaciar elementos uniformemente */
+    border-radius: 10px; /* Bordes redondeados */
+    flex: 6 2 calc(16.666% - 20px); /* 3 tarjetas por fila con 20px de espacio */
+    margin: 10px; /* Espaciado externo */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    text-align: center; /* Centrar texto */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+    height: auto; /* Altura automática */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumentar tamaño al hacer hover */
+}
+
+.card img {
+    width: auto; /* Ancho automático */
+    height: auto; /* Altura automática */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.card h2 {
+    margin: 10px 0; /* Espaciado vertical */
+    color: black; /* Color del texto */
+}
+
+.card p {
+    font-size: 14px; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Espaciado inferior */
+    color: black; /* Color del texto */
+}
+
+.card a {
+    display: flex; /* Usar flexbox para el botón */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Ancho completo */
+    height: 40px; /* Altura del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Eliminar subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos específicos para cada tarjeta */
+.card:nth-child(1) { background-color: #47dff9; } /* Aliento */
+.card:nth-child(1) a { background-color: #4379e6; } /* Botón de Aliento */
+.card:nth-child(1) a:hover { background-color: #0086EB; } /* Hover de Aliento */
+
+.card:nth-child(2) { background-color: #f6fa4e; } /* Luz */
+.card:nth-child(2) a { background-color: #f0840c; } /* Botón de Luz */
+.card:nth-child(2) a:hover { background-color: #f98100; } /* Hover de Luz */
+
+.card:nth-child(3) { background-color: #72eb34; } /* Vida */
+.card:nth-child(3) a { background-color: #a49787; } /* Botón de Vida */
+.card:nth-child(3) a:hover { background-color: #CCC3B4; } /* Hover de Vida */
+
+.card:nth-child(4) { background-color: #fdfdfd; } /* Esperanza */
+.card:nth-child(4) a { background-color: #ffde55; } /* Botón de Esperanza */
+.card:nth-child(4) a:hover { background-color: #FFE094; } /* Hover de Esperanza */
+.card:nth-child(4) a { color: #000000; } /* Texto del botón de Esperanza */
+
+.card:nth-child(5) { background-color: #06ffc9; } /* Mente */
+.card:nth-child(5) a { background-color: #00923d; } /* Botón de Mente */
+.card:nth-child(5) a:hover { background-color: #50b250; } /* Hover de Mente */
+
+.card:nth-child(6) { background-color: #ff2106; } /* Tiempo */
+.card:nth-child(6) h2 { color: #ffffff; } /* Título de Tiempo */
+.card:nth-child(6) p { color: #ffffff; } /* Texto de Tiempo */
+.card:nth-child(6) a { background-color: #b70d0e; } /* Botón de Tiempo */
+.card:nth-child(6) a:hover { background-color: #bf0000; } /* Hover de Tiempo */
+
+.card:nth-child(7) { background-color: #ba1016; } /* Sangre */
+.card:nth-child(7) h2 { color: #ffffff; } /* Título de Sangre */
+.card:nth-child(7) p { color: #ffffff; } /* Texto de Sangre */
+.card:nth-child(7) a { background-color: #3e1601; } /* Botón de Sangre */
+.card:nth-child(7) a:hover { background-color: #3d1909; } /* Hover de Sangre */
+
+.card:nth-child(8) { background-color: #001957; } /* Vacío */
+.card:nth-child(8) h2 { color: #ffffff; } /* Título de Vacío */
+.card:nth-child(8) p { color: #ffffff; } /* Texto de Vacío */
+.card:nth-child(8) a { background-color: #104ea2; } /* Botón de Vacío */
+.card:nth-child(8) a:hover { background-color: #033476; } /* Hover de Vacío */
+
+.card:nth-child(9) { background-color: #000000; } /* Muerte */
+.card:nth-child(9) h2 { color: #ffffff; } /* Título de Muerte */
+.card:nth-child(9) p { color: #ffffff; } /* Texto de Muerte */
+.card:nth-child(9) a { background-color: #306800; } /* Botón de Muerte */
+.card:nth-child(9) a:hover { background-color: #20401f; } /* Hover de Muerte */
+
+.card:nth-child(10) { background-color: #9c4dad; } /* Ira */
+.card:nth-child(10) h2 { color: #ffffff; } /* Título de Ira */
+.card:nth-child(10) p { color: #ffffff; } /* Texto de Ira */
+.card:nth-child(10) a { background-color: #520c61; } /* Botón de Ira */
+.card:nth-child(10) a:hover { background-color: #391e71; } /* Hover de Ira */
+
+.card:nth-child(11) { background-color: #bd1864; } /* Corazón */
+.card:nth-child(11) h2 { color: #ffffff; } /* Título de Corazón */
+.card:nth-child(11) p { color: #ffffff; } /* Texto de Corazón */
+.card:nth-child(11) a { background-color: #55142a; } /* Botón de Corazón */
+.card:nth-child(11) a:hover { background-color: #6e0e2e; } /* Hover de Corazón */
+
+.card:nth-child(12) { background-color: #ffffff; } /* Espacio */
+.card:nth-child(12) a { background-color: #000000; } /* Botón de Espacio */
+.card:nth-child(12) a:hover { background-color: #161616; } /* Hover de Espacio */
+
+/* Footer */
+footer {
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar texto */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 20px; /* Espaciado superior */
+    
+    /* Animación de Fondo */
+    animation: colorChange 0.1s infinite alternate; /* Animación de cambio de color */
+}
+
+/* Definir Animación */
+@keyframes colorChange {
+    0% { background-color: #929292; }  /* Calliope */
+    100% { background-color: #323232; }  /* Caliborn */
+}
+
+/* Media Queries: Para hacer el sitio RESPONSIVE */
+@media (min-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(6, 1fr); /* 6 columnas */
+        grid-template-rows: repeat(2, auto); /* 2 filas */
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna en móviles */
+    }
+}
